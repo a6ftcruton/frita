@@ -11,6 +11,9 @@
         <%= f.file_field :image %>
         <%# params[:item][:categories].each do |category_id| %>
           <%# if check_category.include?(category_id) %>
+            # create a checkbox for each category present in item's categories_ids include
+            <% if item_categories %>
+            <% fail %>
             <%= f.collection_check_boxes :categories, Category.all, :id, :title, checked: true %>
           <%# else %>
             <%#= f.collection_check_boxes :categories, Category.all, :id, :title %>
